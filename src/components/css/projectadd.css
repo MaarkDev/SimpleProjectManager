@@ -1,0 +1,300 @@
+:root{
+    --high-priority-start: rgb(255, 104, 104);
+    --high-priority-card: rgb(255, 191, 191);
+    --med-priority-start: rgb(104, 255, 104);
+    --med-priority-card: rgb(191, 255, 191);
+    --low-priority-start: rgb(104, 104, 255);
+    --low-priority-card: rgb(191, 191, 255);
+}
+
+.project-add-card-bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes onShow {
+    from{
+        top: 100%;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.project-add-card{
+    animation: onShow 100ms;
+    width: 680px;
+    height: 400px;
+    background-color: white;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+.input-title{
+    width: 90%;
+    font-size: 46px;
+    font-weight: bold;
+    outline: 0;
+    border: 0;
+    margin-top: 22px;
+    margin-left: 22px;
+    padding: 0;
+}
+
+.input-desc{
+    padding: 0;
+    width: 320px;
+    height: 280px;
+    overflow: visible;
+    font-size: 16px;
+    margin-left: 22px;
+    margin-top: 14px;
+    margin-bottom: 24px;
+    outline: 0;
+    border: 0;
+    font-family: inherit;
+    overflow: hidden;
+    border-right: 1px solid rgb(204, 204, 204);
+    resize: none;
+}
+
+.form-right{
+    width: 100%;
+    height: 280px;
+    margin-top: 88px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+label > p{
+    font-weight: bold;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.card-buttons{
+    width: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.cancel-button{
+    width: fit-content;
+    font-size: 48px;
+    transition: 200ms;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: rgb(255, 106, 106);
+}
+
+.cancel-button:hover{
+    transition: 200ms;
+    color: red;
+}
+
+.save-btn{
+    width: 100%;
+    height: 42px;
+    font-size: 16px;
+    transition: 200ms;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #9297b2;
+    border: 0;
+    padding: 0 4px;
+    margin-left: 4px;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.save-btn:hover{
+    background-color: #40497e;
+}
+
+.pr-radios{
+    display: flex;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-radio{
+    border-radius: 4px;
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.custom-radio > P{
+    font-size: 14px;
+    margin: auto 0;
+    font-weight: bold;
+    color: white;
+    padding: 6px 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-radio-divider{
+    margin: 0 2px;
+}
+
+.low{
+    background-color: var(--low-priority-card);
+    transition: 200ms;
+}
+
+.low:hover{
+    background-color: var(--low-priority-start);
+    transition: 200ms;
+}
+
+.med{
+    background-color: var(--med-priority-card);
+    transition: 200ms;
+}
+
+.med:hover{
+    background-color: rgb(5, 200, 5);
+    transition: 200ms;
+}
+
+.high{
+    background-color: var(--high-priority-card);
+    transition: 200ms;
+}
+
+.high:hover{
+    background-color: var(--high-priority-start);
+    transition: 200ms;
+}
+
+.low-active{
+    background-color: var(--low-priority-start);
+}
+
+.med-active{
+    background-color: var(--med-priority-start);
+}
+
+.high-active{
+    background-color: var(--high-priority-start);
+}
+
+.budget-input{
+    width: 100%;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    outline: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.pr-add-cal{
+    border: 0;
+    outline: 0;
+    width: 100%;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .project-add-card{
+        zoom: 80%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .project-add-card{
+        zoom: 80%;
+        flex-direction: column;
+        height: fit-content;
+        width: 400px;
+        padding: 20px;
+        padding-top: 0px;
+        padding-bottom: 76px;
+    }
+    .input-desc{
+        border: 0;
+        height: 200px;
+        height: fit-content;
+        font-size: 22px;
+        margin-top: 6px;
+    }
+    .form-right{
+        width: 400px;
+        margin-top: 20px;
+    }
+    .input-title{
+        margin-left: 0;
+    }
+    .input-desc{
+        margin-left: 0;
+    }
+    .c{
+        height: fit-content;
+        border: 1px solid green;
+    }
+    .custom-radio{
+        border-radius: 4px;
+        width: 100%;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        cursor: pointer;
+        margin-top: 4px;
+    }
+    .pr-radios{
+        padding-bottom: 18px;
+    }
+    .save-btn{
+        height: 52px;
+        margin-top: 24px;
+        border-radius: 4px !important;
+    }
+    .cancel-button{
+        font-size: 60px;
+        margin-top: 24px;
+    }
+    .pr-add-cal{
+        padding: 6px 0 4px 0;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .project-add-card{
+        zoom: 80%;
+    }
+}

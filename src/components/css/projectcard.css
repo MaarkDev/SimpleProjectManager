@@ -1,0 +1,131 @@
+:root{
+    --high-priority-start: rgb(255, 104, 104);
+    --high-priority-card: rgb(255, 191, 191);
+    --med-priority-start: rgb(104, 255, 104);
+    --med-priority-card: rgb(191, 255, 191);
+    --low-priority-start: rgb(104, 104, 255);
+    --low-priority-card: rgb(191, 191, 255);
+}
+
+.project-card{
+    width: 360px;
+    height: fit-content;;
+    margin-bottom: 4px;
+    margin-right: 32px;
+    margin-left: 0px;
+    background-color: rgb(234, 234, 234);
+    border-left: 0;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    transition: 120ms;
+    cursor: pointer;
+}
+
+.project-card:hover{
+    background-color: var(--med-priority-card);
+    transition: 120ms;
+}
+
+.project-start{
+    width: 8px;
+    height: calc(100%+(height - 100%));
+    background-color: var(--med-priority-start);
+    border-radius: 4px 0 0 4px;
+}
+
+.card-info{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-left: 6px;
+    color: rgb(42, 42, 42);
+}
+
+.card-title{
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: -12px;
+    color: rgb(49, 49, 49);
+    font-size: 18px;
+}
+
+.card-desc{
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: -32px;
+    width: 328px;
+}
+
+.card-icons{
+    position: absolute;
+    margin-left: 318px;
+    margin-top: 10px;
+    color: gray;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.card-icons:hover{
+    color:rgb(255, 211, 211);
+    background-color: red;
+    z-index: 1;
+}
+
+
+
+.card-priority{
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 8px;
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+.project-card-dates{
+    font-size: 10px;
+    position: absolute;
+    font-weight: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 12px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 214px;
+}
+
+.project-card-dates > p:last-child {
+    margin-top: -14px;
+}
+
+@media screen and (max-width: 768px) {
+    .project-card{
+        width: 340px;
+    }
+    .card-desc{
+        width: 300px;
+    }
+    .card-icons{
+        position: absolute;
+        margin-left: 300px;
+        margin-top: 8px;
+    }
+    .project-card-dates{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .project-card{
+        width: 100%;
+    }
+    .card-icons{
+        margin-left: 320px;
+    }
+}

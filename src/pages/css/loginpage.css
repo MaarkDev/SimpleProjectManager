@@ -1,0 +1,88 @@
+.login-page{
+    background-image: url('../../../public/login-bg-ps-png2-min.png');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25% 50%;
+    position: absolute;
+    top: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    animation: login-up 200ms linear;
+    animation-delay: 100ms;
+    z-index: 0;
+}
+
+.login-left{
+    padding: 32px 24px;
+    height: fit-content;
+    width: 460px;
+    margin-left: 64px;
+    margin-top: 104px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    border-left: 8px solid rgb(104, 255, 104);
+    transition-duration: 200ms;
+    z-index: 1;
+}
+
+.login-left:hover{
+    transform: scale(1.025);
+    transition-duration: 200ms;
+}
+
+.left-img{
+    width: 64px;
+}
+
+.login-left > h1{
+    font-size: 64px;
+    margin-top: 8px;
+}
+
+.login-left > p{
+    font-size: 24px;
+    margin-top: -18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.login-btn{
+    margin-top: 36px;
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .login-page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .login-left{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .login-left{
+        zoom: 80%;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .login-left{
+        zoom: 60%;
+    }
+}
+
+@keyframes login-up {
+    from{
+        margin-top: 100vh;
+        opacity: 0;
+    }to{
+        margin-top: 0;
+        opacity: 1;
+    }
+}

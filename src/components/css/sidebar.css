@@ -1,0 +1,139 @@
+:root{
+    --sidebar-bg: #191f3f;
+    --not-active-text: #9297b2;
+    --active-text: #d5dbf1;
+    --active-el: #41496d;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    background-color: var(--sidebar-bg);
+    top: 0;
+    padding: 6px;
+    transition: ease-in-out 200ms;
+    z-index: 999;
+}
+
+.sidebar-header{
+    width: 100%;
+    margin-top: 14px;
+}
+
+.sidebar-header-inner{
+    display: flex;
+    align-items: center;
+
+}
+
+.sidebar-logo{
+    width: 40px;
+}
+
+.sidebar-logo > img{
+    width: inherit;
+    height: inherit;
+    border-radius: 4px;
+}
+
+.sidebar-heading{
+    color: var(--active-text);
+    height: 40px !important;
+    margin-left: 6px;
+}
+
+.sidebar-heading > h1{
+    margin-top: 10px;
+    margin-left: -16px;
+    font-size: 22px;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+}
+
+.navigation > a{
+    text-decoration: none;
+    color: var(--not-active-text);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 14px 0;
+    padding-left: 8px;
+    border-radius: 4px;
+}
+
+.active{
+    color: var(--active-text) !important;
+    background-color: var(--active-el);
+}
+
+.navigation > a:hover{
+    color: var(--active-text) !important;
+    background-color: var(--active-el);
+}
+
+.sidebar-icons{
+    color: var(--not-active-text);
+    font-size: 28px;
+    padding: 6px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 22px;
+    right: 0;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.sidebar:hover{
+    width: 320px;
+    transition: ease-in-out 200ms;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.expand-button-expanded{
+    display: flex;
+    position: absolute;
+    font-size: 48px;
+    color: var(--not-active-text);
+    right: 0;
+    top: 50%;
+    background-color: var(--sidebar-bg);;
+    transform: translateX(-25%) translateY(-50%) rotate(180deg);
+    border-radius: 50%;
+    display: none;
+}
+
+.expand-button-collapsed{
+    display: flex;
+    position: absolute;
+    font-size: 48px;
+    color: var(--not-active-text);
+    right: 0;
+    top: 50%;
+    background-color: var(--sidebar-bg);
+    transform: translateX(-25%) translateY(-50%);
+    border-radius: 50%;
+    display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .sidebar{
+        transform: translateX(-90%);
+    }
+    .expanded{
+        transform: translateX(0) !important;
+    }
+
+    .expand-button-expanded{
+        display: flex;
+    }
+    .expand-button-collapsed{
+        display: flex;
+    }
+}

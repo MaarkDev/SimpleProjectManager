@@ -1,0 +1,104 @@
+.dashboard-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+}
+
+.dashboard-content-left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-greeting{
+    color: rgb(94, 94, 94);
+    font-size: 24px;
+    line-height: 52px;
+    margin-top: -36px;
+}
+
+.dashboard-data-wrapper{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.dashboard-content-right{
+    width: 40%;
+}
+
+.dashboard-proj-stat-graph{
+    margin-left: 0 !important;
+}
+
+.dashboard-proj-stats{
+    height: fit-content;
+    padding: 8px;
+    padding-right: 36px;
+    border-left: 1px solid rgb(204, 204, 204);
+    padding-left: 12px;
+    margin-bottom: 16px;
+}
+
+.dashboard-proj-stats > h2{
+    line-height: 0;
+    padding-bottom: 8px;
+    color: gray;
+}
+
+.dashboard-ptask-h2{
+    color: gray;
+}
+
+.dashboard-border-wrapper{
+    padding-bottom: 8px;
+    color: gray;
+    border-left: 1px solid rgb(204, 204, 204);
+    padding: 12px;
+    margin-bottom: -12px !important;    
+    height: fit-content;
+}
+
+.dashboard-no-graph{
+    margin: 0 !important;
+    margin-top: 8px !important;
+    padding: 0;
+}
+
+
+
+.dashboard-ptask-cards{
+    width: 400px;
+    height: fit-content;
+    max-height: 600px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.dashboard-calendar-wrapper{
+    width: 100%;
+    height: fit-content;
+    margin-top: 8px;
+    background-color: rgb(234, 234, 234);
+    margin-bottom: 0px;
+}
+
+.dashboard-cal-title{
+    margin-top: 48px !important;
+}
+
+@media screen and (max-width: 480px) {
+    .dashboard-content-wrapper{
+        zoom: 80%;
+    }
+}
+
+@media screen and (max-width: 1650px) and (min-width: 1450px) {
+    .dashboard-page{
+        zoom: 80%;
+    }
+}
+

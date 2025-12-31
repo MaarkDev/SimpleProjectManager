@@ -1,0 +1,323 @@
+.expanded-page{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.expanded-card{
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 12px;
+    padding: 0 32px;
+    animation: onShow 100ms;
+}
+
+.expanded-title{
+    margin-top: 0px;
+    margin-bottom: -20px;
+}
+
+.expanded-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.expanded-desc{
+    font-size: 16px;
+    width: 100%;
+    height: 120px;
+    padding-right: 12px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.expanded-close{
+    color: gray;
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+
+.expanded-close:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.expanded-task-section{
+    width: 55%;
+    height: 100%;
+    margin-left: 16px;
+    margin-top: -74px;
+    border-left: 1px solid rgb(204, 204, 204);
+    padding-left: 12px;
+}
+
+.expanded-task-title > h2{
+    margin-top: -12px;
+}
+
+.expanded-icons{
+    font-size: 24px;
+    margin-top: -32px;
+    display: flex;
+    align-items: center;   
+    color: #9297b2; 
+    transition: 200ms;
+}
+
+.expanded-icons > p{
+    font-weight: bold;
+    margin: 0;    
+    margin-left: 6px;
+    font-size: 22px;
+}
+
+.expanded-icons:hover{
+    color: #40497e;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.expanded-tasks-list{
+    height: 400px;
+    margin-top: 8px;
+    overflow-y: scroll;
+}
+
+.proj-done{
+    height: fit-content;
+    display: flex;
+    width: fit-content;
+    font-size: 26px;
+    margin-top: -32px;
+    color: gray;
+    transition: 200ms;
+    zoom: 90%;
+}
+
+.proj-done > p{
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-top: -2px;
+}
+
+.proj-done:hover{
+    color: rgb(0, 190, 0);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.expanded-left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+
+.graph{
+    margin-top: auto;
+    margin-bottom: 0px;
+    margin-left: -0px;
+}
+
+.graph > canvas{
+    height: 200px;
+    max-height: 200px;
+    margin-bottom: 24px;
+}
+
+.expanded-dates{
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 64px;
+    margin-right: 38px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 12px;
+    border-right: 1px solid rgb(204, 204, 204);
+}
+
+.expanded-dates > p {
+    padding: 0;
+    margin: 0 0;
+}
+
+.task-sec-title{
+    font-size: 24px;
+}
+
+.c{
+    margin-top: 8px;
+    border: 0 !important;
+}
+
+.edit-desc{
+    display: flex;
+    width: 220px;
+    font-size: 14px;
+    align-items: flex-end;
+    color: gray;
+    margin-top: 6px;
+    margin-bottom: -8px;
+    transition: 200ms;
+}
+
+.edit-desc:hover{
+    cursor: pointer;
+    color: #40497e;
+    transition: 200ms;
+}
+
+.edit-desc > P{
+    padding: 0;
+    margin: 0;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+.expanded-desc-edit-icon{
+    font-size: 20px;
+}
+
+@keyframes onShow {
+    from{
+        top: 100%;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .expanded-card{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 1200px)  and (min-width: 768px) {
+    .proj-done{
+        zoom: 80%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .expanded-card{
+        width: 90vw;
+        height: fit-content;
+        width: 400px;
+        padding-bottom: 16px;
+        padding-left: 0;
+    }
+    .expanded-title{
+        margin-top: -18px;
+        margin-left: 16px;
+    }
+    .expanded-desc-edit{
+        margin-left: 16px;
+        margin-top: 0px;
+        font-size: 38px !important;
+    }
+    .extended-desc-edit{
+        font-size: 18px;
+        margin-top: 4px;
+        margin-left: 12px;
+        
+    }
+    .expanded-desc-edit-icon{
+        height: 24px;
+        margin-left: 16px;
+    }
+    .proj-done{
+        margin-left: 16px;
+        margin-top: -28px;
+        display: inline flex;
+        width: 400px;;
+    }
+    .edit-desc{
+        margin-top: 4px;
+        margin-bottom: -10px;
+    }
+    .expanded-main{
+        width: 400px;
+        flex-direction: column;
+        margin-left: 16px;
+    }
+    .expanded-desc{
+        width: 240%;
+        height: fit-content;
+        max-height: 160px;
+        overflow-y: scroll;
+        font-size: 20px;
+        margin-top: 4px;
+        margin-bottom: 12px;
+    }
+    .expanded-task-section{
+        margin-top: 0;
+        width: 100%;
+        height: 300px;
+        max-height: 400px;
+        padding-left: 0;
+        margin-left: 0;
+        border: 0;
+        margin-bottom: -20px;
+    }
+    .expanded-tasks-list{
+        overflow-y: scroll;
+        max-height: 210px;
+    }
+
+    .expanded-dates{
+        display: none;
+    }
+    .graph{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 385px){
+    .expanded-card{
+        padding-bottom: 24px;
+        zoom: 100%;
+    }
+    .expanded-task-section{
+        margin-top: 22px;
+        padding-top: 12px;
+        margin-top: -24px;
+    }
+    .expanded-task-title{
+        padding-top: 12px;
+    }
+    .expanded-desc{
+        padding: 0; 
+        font-size: 20px;   
+    }
+}
+
+@media screen and (max-width: 450px){
+    .expanded-card{
+        zoom: 80%;
+    }
+}

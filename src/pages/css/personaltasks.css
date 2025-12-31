@@ -1,0 +1,70 @@
+.p-tasks-main{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.to-do-p-tasks{
+    width: 50%;
+    height: fit-content;
+    border-left: 1px solid rgb(204, 204, 204);
+    padding-top: 12px;
+    padding-left: 12px;
+    margin-top: 24px;
+    padding-bottom: 12px;
+    margin-right: 16px;
+}
+
+.done-p-tasks{
+    width: 50%;
+    height: fit-content;
+    border-left: 1px solid rgb(204, 204, 204);
+    padding-top: 12px;
+    padding-left: 12px;
+    margin-top: 24px;
+    padding-bottom: 12px;
+}
+
+@media screen and (max-width: 1650px) {
+    .p-tasks-main{
+        zoom: 80%;
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .p-tasks-main{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .to-do-p-tasks{
+        width: 100%;
+    }
+
+    .done-p-tasks{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .p-tasks-main{
+        zoom: 80%;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .p-tasks-main{
+        zoom: 70%;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .p-tasks-main{
+        zoom: 80%;
+        overflow-x: hidden;
+    }
+}

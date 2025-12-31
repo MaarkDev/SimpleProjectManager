@@ -1,0 +1,43 @@
+.calendar-page{
+    user-zoom: fixed;
+}
+
+.calendar-wrapper{
+    z-index: -10 !important;
+    width: 80%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1080px) {
+    .calendar-wrapper{
+        zoom: 80%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .calendar-wrapper{
+        zoom: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .calendar-wrapper{
+        zoom: 80%;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .calendar-wrapper{
+        zoom: 100%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .calendar-wrapper{
+        zoom: 95%;
+    }
+}

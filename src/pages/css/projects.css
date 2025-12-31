@@ -1,0 +1,170 @@
+.project-page{
+    color: rgb(40, 40, 40);
+    font-size: 24px;
+    width: fit-content;
+}
+
+.projects-header{
+    display: flex;
+}
+
+.projects-header > h1{
+    margin-bottom: 4px;
+}
+
+.info-circle{
+    margin-top: 34px;
+    font-size: 20px;
+    display: block;
+    position: relative;
+}
+
+.projects-main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 36px;
+    width: fit-content;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.projects-container{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    min-width: 360px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    padding: 8px 0;
+    padding-left: 12px;
+    border-left: 1px solid rgb(204, 204, 204);
+    margin-top: 20px;
+}
+
+.projects-completed-container{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    min-width: 360px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 8px 0;
+    padding-left: 12px;
+    border-left: 1px solid rgb(204, 204, 204);
+}
+
+h3{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 8px;
+    color: gray;
+}
+
+.projects-analytics{
+    width: 360px;
+    height: 600px;
+    border-radius: 8px;
+    margin-right: 42px;
+    flex-shrink: 0;
+    display: none;
+    margin-top: 20px;
+}
+
+.plus-circle{
+    font-size: 32px;
+    margin-left: 0px;
+    color: #9297b2;
+    transition: 200ms;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-width: 400px;
+}
+
+.plus-circle > h4{
+    margin: 0;
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.plus-circle:hover{
+    transition: 200ms;
+    cursor: pointer;
+    color: #40497e;
+}
+
+.projects-analytics{
+    height: fit-content;
+    display: flex;
+    flex: 1;
+    min-width: 370px;
+    border-left: 1px solid rgb(204, 204, 204);
+    border-radius: 0;
+    flex-direction: column;
+    max-width: 260px;
+    width: 370px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+    padding-bottom: 14px;
+}
+
+.projects-analytics > h3{
+    margin-top: 8px;
+    margin-left: 12px;
+    padding-left: 0;
+}
+
+.proj-graph{
+    width: 340px;
+    margin-top: 18px;
+    margin-left: 12px;
+    padding-left: 16px;
+    background-color: rgb(234, 234, 234);
+    padding: 12px 12px;
+    border-radius: 4px;
+}
+
+.priority{
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+.nograph{
+    margin-left: 12px;
+    margin-top: 0;
+}
+
+.projects-no-graph{
+    margin-left: 12px !important;
+}
+
+@media screen and (max-width: 1650px) {
+    .projects-main{
+        zoom: 80%;
+        margin-top: 0px;
+    }
+    .projects-analytics{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1650px) {
+    .projects-main{
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    
+    .nograph{
+        margin-left: 0px;
+        margin-top: 0;
+    }
+
+
+}

@@ -1,0 +1,18 @@
+.graph-noth-show-wrapper{
+    background-color: rgb(234, 234, 234);
+    height: 240px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.graph-noth-show-text{
+    height: fit-content;
+    width: fit-content;
+    max-width: 280px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(151, 151, 151);;
+}
